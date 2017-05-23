@@ -1,0 +1,72 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Cars API
+
+Cars is a simple API that allow you mange a car server system.
+
+## Player Services [/player/{playerId}]
+
++ Response 200 (application/json)
+
+        {
+            "name": "halzate",
+            "money": 100,
+            "experience": 0
+        }
+
+## Race Services [/race]
+
+### Report Race [POST]
+
++ Request (application/json)
+
+        {
+            "firstPlaceId": 1,
+            "secondPlaceId": 2,
+            "thirdPlaceId": 3
+        }
+
++ Response 200
+
+## Car Services [/car/{playerId}]
+
+### Get Car [GET]
+
++ Request (application/json)
+
+        {
+            "carId": 1
+        }
+
++ Response 200 (application/json)
+
+        {
+            "model" : nissan,
+            "topSpeed" : 150,
+            "acceleration" : 100,
+            "handling" : 100
+        }
+
+### Unlock Car [POST]
+
++ Request (application/json)
+
+        {
+            "carId": 1,
+        }
+
++ Response 200
+
+## Car Stats Services [/carStats/{playerId}]
+
+### Increase Stat [POST]
+
++ Request (application/json)
+
+        {
+            "carId": 1,
+            "statToIncrease": "acceleration"
+        }
+
++ Response 200
