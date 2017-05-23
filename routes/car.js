@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 router.post('/:playerId', function(request, response) {
   var query='';
   var playerId = request.params.playerId;
+  //Body elements
+  var carId = request.body.carId;
 });
 //### Unlock Car [POST]
 router.post('/:playerId', function(request, response){
